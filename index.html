@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pokupon</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="main.js"></script>
+</head>
+<body>
+	<form>
+		<input type="text" name="search-text" placeholder="Введите текст для поиска" id="search-text" class="search-text">
+	    <select name="searcher" id="searcher">
+	    	<option selected disabled hidden value="">Укажите поисковую систему</option>
+	        <option value="http://www.google.ru/search?q=">google</option>
+	        <option value="https://www.bing.com/search?q=">bing</option>
+	        <option value="https://uk.ask.com/web?q=">ask</option>
+	    </select>
+	    <input type="button" name="s" id="searcher"   onclick="validate(this.form)" value="Искать">
+	</form>
+</body>
+</html>
