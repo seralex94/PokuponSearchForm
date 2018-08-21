@@ -3,7 +3,10 @@
 function validate(form) {
 	var elems = form.elements;
 	if (elems[0].value) {
+		var element = document.getElementById("search-text");
+        element.classList.remove("error");
         if (elems[1].value) {
+        		element.classList.remove("error");
         		document.location.href=document.getElementById("searcher").options[document.getElementById("searcher").selectedIndex].value+elems[0].value;
     	} else {
     		alert('Укажите поисковую систему.');
@@ -12,7 +15,7 @@ function validate(form) {
     	}
     } else {
     	alert('Введите текст для поиска.');
-        var element = document.getElementById("search-text");
+        element = document.getElementById("search-text");
         element.classList.add("error");
     }
 }
